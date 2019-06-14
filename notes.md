@@ -79,6 +79,7 @@ MANTRAS:
  -- for one to many relationships, there are FK involved
  -- the FK goes in the many side
  -- for a many to many relationship we need a third table
+ -- a many to many table can have extra information
 
 COMPOSITE KEYS:
 
@@ -127,7 +128,7 @@ Or if they have multiple cohorts?
 You would create a composite key, and remove the FK from students. With this method, you can also create multiple fields. This composite key connects each cohort with the unique students that you draw from. This would be between the students and cohort.
 
 
-In the following table, date is optional (because you may be an accepted student but have yet to know your start date). This is called a transaction table.
+In the following table, date is optional (because you may be an accepted student but have yet to know your start date). This is called a junction table (usually used in many to many) that may have transactional data.
     
     |      COHORT_STUDENTS      | 
     -----------------------------
