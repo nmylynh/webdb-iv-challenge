@@ -161,13 +161,17 @@ Web Development --> WEB19 --> [Mylynh Nguyen, WEB19, 3/16/19, 10/31/19]
 
 Several methods are provided which assist in building joins.
 
-### JOIN:
+### JOIN STRUCTURE:
      .join(table, first, [operator], second)
+
+For example, below we're joining the contacts and user table where the user_id would match the user.id. Then we're fetching the id and phone number.
 
     knex('users')
     .join('contacts', 'users.id', '=', 'contacts.user_id')
     .select('users.id', 'contacts.phone')
-    Outputs:
+
+Outputs in SQL:
+
     SELECT users.id, contacts.phone
     FROM users 
     INNER JOIN contacts
