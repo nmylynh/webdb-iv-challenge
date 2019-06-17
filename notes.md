@@ -154,3 +154,22 @@ Overall, once adding the transaction data, data flow would be like this:
 
 
 Web Development --> WEB19 --> [Mylynh Nguyen, WEB19, 3/16/19, 10/31/19]
+
+------------------------------------------------------------------------
+
+## Data Modeling
+
+Several methods are provided which assist in building joins.
+
+### JOIN:
+     .join(table, first, [operator], second)
+
+    knex('users')
+    .join('contacts', 'users.id', '=', 'contacts.user_id')
+    .select('users.id', 'contacts.phone')
+    Outputs:
+    SELECT users.id, contacts.phone
+    FROM users 
+    INNER JOIN contacts
+    ON users.id = contacts.user_id
+
