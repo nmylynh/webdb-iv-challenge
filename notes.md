@@ -155,6 +155,8 @@ Overall, once adding the transaction data, data flow would be like this:
 
 Web Development --> WEB19 --> [Mylynh Nguyen, WEB19, 3/16/19, 10/31/19]
 
+One --> Many --> Many 
+
 ------------------------------------------------------------------------
 
 ## Data Modeling
@@ -176,4 +178,6 @@ Outputs in SQL:
     FROM users 
     INNER JOIN contacts
     ON users.id = contacts.user_id
+
+
 
